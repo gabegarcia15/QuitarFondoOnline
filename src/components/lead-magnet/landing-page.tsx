@@ -26,6 +26,13 @@ const faqs = [
   },
 ] as const;
 
+const sampleComparison = {
+  beforeSrc: "/examples/pexels-olly-733872.jpg",
+  afterSrc: "/examples/pexels-olly-733872-after.png",
+  pexelsPhotoUrl: "https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/",
+  photographerName: "Andrea Piacquadio",
+} as const;
+
 export function LeadMagnetPage() {
   const backgroundRemoverUrl = buildBackgroundRemoverRedirectUrl();
 
@@ -43,6 +50,60 @@ export function LeadMagnetPage() {
           </div>
           <DemoUploader className="mt-7 sm:mt-9" />
         </article>
+      </section>
+
+      <section
+        id="ejemplo-real"
+        className="section-shell mt-8 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-10 sm:p-8"
+      >
+        <div className="grid gap-2">
+          <p className="text-sm/6 font-semibold uppercase tracking-wide text-[var(--brand-deep)]">Ejemplo real</p>
+          <h2 className="text-balance text-2xl/8 font-semibold text-zinc-900 sm:text-3xl/9">
+            Antes y despues con una foto real de Pexels
+          </h2>
+          <p className="max-w-3xl text-sm/6 text-zinc-600">
+            Usamos una foto real de Pexels y la procesamos con nuestro removedor de fondo para mostrar un resultado real.
+          </p>
+        </div>
+
+        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <article className="rounded-xl border border-zinc-900/10 bg-(--bg-card) p-2.5 shadow-sm">
+            <p className="mb-2 text-xs/5 font-semibold uppercase tracking-wide text-zinc-500">Antes</p>
+            <div className="overflow-hidden rounded-lg border border-zinc-900/10 bg-white">
+              <img
+                src={sampleComparison.beforeSrc}
+                alt="Imagen original de retrato antes de eliminar fondo"
+                className="block h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+          </article>
+
+          <article className="rounded-xl border border-zinc-900/10 bg-(--bg-card) p-2.5 shadow-sm">
+            <p className="mb-2 text-xs/5 font-semibold uppercase tracking-wide text-zinc-500">Despues</p>
+            <div className="bg-checkered overflow-hidden rounded-lg border border-zinc-900/10 p-2">
+              <img
+                src={sampleComparison.afterSrc}
+                alt="Imagen de retrato con fondo eliminado"
+                className="block h-auto w-full"
+                loading="lazy"
+              />
+            </div>
+          </article>
+        </div>
+
+        <p className="mt-3 text-xs/5 text-zinc-500">
+          Foto fuente por{" "}
+          <a
+            href={sampleComparison.pexelsPhotoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-zinc-700 underline decoration-zinc-400 underline-offset-2 hover:text-zinc-900"
+          >
+            {sampleComparison.photographerName} en Pexels
+          </a>
+          .
+        </p>
       </section>
 
       <section id="como-funciona" className="section-shell mt-[4.5rem] rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-[5.5rem] sm:p-8 lg:mt-[6.5rem]">

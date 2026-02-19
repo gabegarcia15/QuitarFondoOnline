@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const beforeImageUrl = `${siteConfig.siteUrl}/examples/background-removal-before.svg`;
-  const afterImageUrl = `${siteConfig.siteUrl}/examples/background-removal-after.svg`;
+  const beforeImageUrl = `${siteConfig.siteUrl}/examples/pexels-olly-733872.jpg`;
+  const afterImageUrl = `${siteConfig.siteUrl}/examples/pexels-olly-733872-after.png`;
 
   const websiteSchema = {
     "@context": "https://schema.org",
@@ -130,8 +130,8 @@ export default function Page() {
   const beforeImageSchema = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    name: "Imagen original antes de eliminar fondo",
-    description: "Ejemplo de imagen con fondo original antes del procesamiento.",
+    name: "Foto original antes de eliminar fondo",
+    description: "Foto real de retrato tomada de Pexels antes del procesamiento.",
     inLanguage: "es",
     contentUrl: beforeImageUrl,
     url: beforeImageUrl,
@@ -141,8 +141,8 @@ export default function Page() {
   const afterImageSchema = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
-    name: "Imagen despues de eliminar fondo",
-    description: "Ejemplo de imagen resultante con fondo limpio para ecommerce.",
+    name: "Foto resultante despues de eliminar fondo",
+    description: "Resultado real con fondo eliminado sobre retrato de muestra de Pexels.",
     inLanguage: "es",
     contentUrl: afterImageUrl,
     url: afterImageUrl,

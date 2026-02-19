@@ -53,6 +53,17 @@ export function SiteFooter() {
           </div>
         </div>
         <p className="mt-2">Procesamiento rapido de fondos para imagenes.</p>
+        <p className="mt-3 text-center text-xs text-zinc-500 sm:mt-4 sm:text-left">
+          Powered by{" "}
+          <Link
+            href="https://www.backgroundremover.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-canvas)]"
+          >
+            Background Remover
+          </Link>
+        </p>
       </div>
     </footer>
   );
