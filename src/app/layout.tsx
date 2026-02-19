@@ -6,11 +6,22 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
+  applicationName: siteConfig.name,
   title: {
     default: "Eliminar Fondo De Una Imagen",
     template: "%s | Eliminar Fondo De Una Imagen",
   },
   description: siteConfig.description,
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     description: siteConfig.description,
     siteName: siteConfig.name,
