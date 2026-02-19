@@ -14,7 +14,7 @@ export function SiteHeader() {
     <header className="py-6 sm:py-8 lg:py-10">
       <div className="section-shell rounded-2xl border border-zinc-900/15 bg-white/80 p-4 shadow-sm backdrop-blur sm:p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <Link href="/#inicio" className="inline-flex items-center gap-2 text-base/6 font-semibold text-zinc-900">
+          <Link href="/" className="inline-flex items-center gap-2 text-base/6 font-semibold text-zinc-900">
             <Camera className="size-4 text-[var(--brand)]" />
             {siteConfig.name}
           </Link>
