@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 
 const FATHOM_SITE_ID = process.env.NEXT_PUBLIC_FATHOM_ID;
-const INCLUDED_DOMAINS = ["eliminarfondodeunaimagen.com", "www.eliminarfondodeunaimagen.com"];
+const INCLUDED_DOMAINS = ["quitarfondoonline.com", "www.quitarfondoonline.com"];
 
 export function FathomAnalytics() {
   const pathname = usePathname();

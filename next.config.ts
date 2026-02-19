@@ -8,8 +8,8 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "eliminarfondodeunaimagen.com" }],
-        destination: "https://www.eliminarfondodeunaimagen.com/:path*",
+        has: [{ type: "host", value: "quitarfondoonline.com" }],
+        destination: "https://www.quitarfondoonline.com/:path*",
         permanent: true,
       },
     ];
