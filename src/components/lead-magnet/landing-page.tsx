@@ -131,6 +131,39 @@ export function LeadMagnetPage() {
         </div>
       </section>
 
+      <section className="section-shell mt-8 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-10 sm:p-8">
+        <h2 className="text-2xl/8 font-semibold text-zinc-900">Guias populares</h2>
+        <p className="mt-2 max-w-3xl text-sm/6 text-zinc-600">
+          Aprende casos especificos para ecommerce y marketing con guias rapidas de eliminacion de fondo.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href="/quitar-fondo-blanco"
+            className="rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm/6 font-medium text-zinc-700 hover:border-zinc-900/25 hover:text-zinc-900"
+          >
+            Quitar fondo blanco
+          </Link>
+          <Link
+            href="/fondo-transparente-png"
+            className="rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm/6 font-medium text-zinc-700 hover:border-zinc-900/25 hover:text-zinc-900"
+          >
+            Fondo transparente PNG
+          </Link>
+          <Link
+            href="/fotos-de-producto-sin-fondo"
+            className="rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm/6 font-medium text-zinc-700 hover:border-zinc-900/25 hover:text-zinc-900"
+          >
+            Fotos de producto sin fondo
+          </Link>
+          <Link
+            href="/logo-sin-fondo"
+            className="rounded-full border border-zinc-900/15 bg-white px-4 py-2 text-sm/6 font-medium text-zinc-700 hover:border-zinc-900/25 hover:text-zinc-900"
+          >
+            Logo sin fondo
+          </Link>
+        </div>
+      </section>
+
       <footer className="section-shell mt-10 border-t border-zinc-900/10 pt-6 text-sm/6 text-zinc-600">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} {siteConfig.name}</p>

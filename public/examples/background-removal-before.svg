@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Ejemplo antes de eliminar fondo</title>
+  <desc id="desc">Producto con fondo de estudio antes del recorte.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde7dd" />
+      <stop offset="100%" stop-color="#f7d5bb" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <circle cx="600" cy="400" r="220" fill="#ffffff" opacity="0.5" />
+  <rect x="470" y="220" width="260" height="360" rx="38" fill="#2f2f2f" />
+  <rect x="500" y="260" width="200" height="70" rx="16" fill="#f5f5f5" />
+  <text x="600" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#333333">PRODUCTO</text>
+  <text x="600" y="710" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#5a3124">
+    Antes: imagen con fondo
+  </text>
+</svg>
