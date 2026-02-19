@@ -1,9 +1,25 @@
+const DEFAULT_SITE_URL = "https://www.eliminarfondodeunaimagen.com";
+
+function normalizeSiteUrl(input: string): string {
+  try {
+    const url = new URL(input);
+    if (url.hostname === "eliminarfondodeunaimagen.com") {
+      url.hostname = "www.eliminarfondodeunaimagen.com";
+    }
+    return url.toString().replace(/\/$/, "");
+  } catch {
+    return DEFAULT_SITE_URL;
+  }
+}
+
+const normalizedSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL);
+
 export const siteConfig = {
   name: "Eliminar Fondo De Una Imagen",
   headline: "Eliminar Fondo De Una Imagen",
   description:
     "Eliminar Fondo De Una Imagen online en segundos con una herramienta simple en espanol para recortes limpios.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.eliminarfondodeunaimagen.com",
+  siteUrl: normalizedSiteUrl,
   backgroundRemoverUrl:
     process.env.NEXT_PUBLIC_BR_HOME_URL ?? "https://backgroundremover.com",
   pricingUrl:

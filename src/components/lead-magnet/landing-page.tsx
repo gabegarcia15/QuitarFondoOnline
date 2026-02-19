@@ -1,6 +1,7 @@
 "use client";
 
 import type React from "react";
+import Link from "next/link";
 import { Camera, CheckCircle2, Clock3, Layers2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -131,10 +132,18 @@ export function LeadMagnetPage() {
       </section>
 
       <footer className="section-shell mt-10 border-t border-zinc-900/10 pt-6 text-sm/6 text-zinc-600">
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} {siteConfig.name}</p>
-          <p>Procesamiento rapido de fondos para imagenes.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/terms" className="font-medium text-zinc-700 hover:text-zinc-900">
+              Terminos
+            </Link>
+            <Link href="/privacy" className="font-medium text-zinc-700 hover:text-zinc-900">
+              Privacidad
+            </Link>
+          </div>
         </div>
+        <p className="mt-2">Procesamiento rapido de fondos para imagenes.</p>
       </footer>
     </main>
   );
