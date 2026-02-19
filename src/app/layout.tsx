@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { FathomAnalytics } from "./fathom-analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <body>
+        <FathomAnalytics />
         <SiteHeader />
         {children}
         <SiteFooter />
