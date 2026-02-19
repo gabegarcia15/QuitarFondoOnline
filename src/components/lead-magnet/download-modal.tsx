@@ -66,15 +66,25 @@ export function DownloadModal({ isOpen, onClose, result }: DownloadModalProps) {
 
   return (
     <Dialog open={isOpen} onClose={onClose} size="5xl">
-      <DialogTitle className="flex items-center gap-2 text-balance text-xl/7 sm:text-2xl/8">
-        <span aria-hidden className="text-xl leading-none sm:text-2xl">
-          🎉
-        </span>
-        Fondo eliminado con exito
-      </DialogTitle>
-      <DialogDescription className="text-sm/6 text-zinc-600 dark:text-zinc-300">
-        Descarga tu resultado gratis o continua en Background Remover para opciones avanzadas.
-      </DialogDescription>
+      <div className="relative pr-12">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Cerrar modal"
+          className="absolute right-0 top-0 inline-flex size-8 items-center justify-center rounded-md text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white dark:focus-visible:ring-orange-400 dark:focus-visible:ring-offset-zinc-900"
+        >
+          <X aria-hidden className="size-4.5" />
+        </button>
+        <DialogTitle className="flex items-center gap-2 text-balance text-xl/7 sm:text-2xl/8">
+          <span aria-hidden className="text-xl leading-none sm:text-2xl">
+            🎉
+          </span>
+          Fondo eliminado con exito
+        </DialogTitle>
+        <DialogDescription className="text-sm/6 text-zinc-600 dark:text-zinc-300">
+          Descarga tu resultado gratis o continua en Background Remover para opciones avanzadas.
+        </DialogDescription>
+      </div>
 
       <DialogBody className="mt-4">
         <div className="grid gap-3 sm:grid-cols-2">
