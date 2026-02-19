@@ -39,7 +39,7 @@ h3 {
 }
 
 .section-shell {
-  width: min(70rem, calc(100% - 2.5rem));
+  width: min(72rem, calc(100% - clamp(2.5rem, 6vw, 5rem)));
   margin-inline: auto;
 }
 

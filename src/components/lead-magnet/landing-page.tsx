@@ -1,10 +1,10 @@
 "use client";
 
 import type React from "react";
-import { CheckCircle2, Clock3, Layers2, ShieldCheck, Sparkles } from "lucide-react";
+import { Camera, CheckCircle2, Clock3, Layers2, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
-import { buildPricingRedirectUrl } from "@/lib/redirect";
+import { buildBackgroundRemoverRedirectUrl } from "@/lib/redirect";
 import { DemoUploader } from "./demo-uploader";
 
 const faqs = [
@@ -27,14 +27,14 @@ const faqs = [
 ] as const;
 
 export function LeadMagnetPage() {
-  const pricingUrl = buildPricingRedirectUrl();
+  const backgroundRemoverUrl = buildBackgroundRemoverRedirectUrl();
 
   return (
-    <main className="min-h-dvh py-6 sm:py-8">
+    <main className="min-h-dvh py-6 sm:py-8 lg:py-10">
       <header className="section-shell rounded-2xl border border-zinc-900/15 bg-white/80 p-4 shadow-sm backdrop-blur sm:p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <a href="#inicio" className="inline-flex items-center gap-2 text-base/6 font-semibold text-zinc-900">
-            <Sparkles className="size-4 text-[var(--brand)]" />
+            <Camera className="size-4 text-[var(--brand)]" />
             {siteConfig.name}
           </a>
           <nav className="flex flex-wrap items-center gap-2">
@@ -51,25 +51,21 @@ export function LeadMagnetPage() {
         </div>
       </header>
 
-      <section id="inicio" className="section-shell mt-6">
-        <article className="rounded-3xl border border-zinc-900/10 bg-(--bg-card) p-5 shadow-xl sm:p-8">
-          <div className="grid gap-2 text-center">
+      <section id="inicio" className="section-shell mt-6 sm:mt-8">
+        <article className="rounded-3xl border border-zinc-900/10 bg-(--bg-card) p-7 shadow-xl sm:p-10 lg:p-12">
+          <div className="grid gap-3 text-center sm:gap-4">
             <p className="text-sm/6 font-semibold uppercase tracking-wide text-[var(--brand-deep)]">
               Removedor de fondo online
             </p>
             <h1 className="text-balance font-semibold text-4xl/10 text-zinc-900 sm:text-6xl/[1.02]">
               Eliminar Fondo De Una Imagen
             </h1>
-            <p className="mx-auto max-w-2xl text-base/7 text-zinc-600 sm:text-lg/8">
-              Arrastra y suelta tu foto o toca para subirla.
-            </p>
-            <p className="text-xs/5 text-zinc-500">JPG, PNG y WEBP hasta 10MB.</p>
           </div>
-          <DemoUploader className="mt-5 sm:mt-6" />
+          <DemoUploader className="mt-7 sm:mt-9" />
         </article>
       </section>
 
-      <section id="como-funciona" className="section-shell mt-6 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:p-8">
+      <section id="como-funciona" className="section-shell mt-[4.5rem] rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-[5.5rem] sm:p-8 lg:mt-[6.5rem]">
         <h2 className="text-2xl/8 font-semibold text-zinc-900">Tu flujo en 3 pasos</h2>
         <ol className="mt-4 grid gap-3">
           <StepItem number="01" title="Sube la imagen" copy="Arrastra o selecciona JPG, PNG o WEBP." />
@@ -82,7 +78,7 @@ export function LeadMagnetPage() {
         </ol>
       </section>
 
-      <section id="beneficios" className="section-shell mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <section id="beneficios" className="section-shell mt-8 grid gap-4 sm:mt-10 md:grid-cols-2 xl:grid-cols-4">
         <FeatureCard
           icon={<Layers2 className="size-5 text-[var(--brand)]" />}
           title="Ideal para ecommerce"
@@ -105,7 +101,7 @@ export function LeadMagnetPage() {
         />
       </section>
 
-      <section id="faq" className="section-shell mt-6 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:p-8">
+      <section id="faq" className="section-shell mt-8 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-10 sm:p-8">
         <h2 className="text-3xl/9 font-semibold text-zinc-900">Preguntas frecuentes</h2>
         <div className="mt-5 grid gap-3">
           {faqs.map((faq) => (
@@ -117,7 +113,7 @@ export function LeadMagnetPage() {
         </div>
       </section>
 
-      <section className="section-shell mt-6 rounded-3xl border border-[var(--brand)]/25 bg-linear-to-r from-[var(--brand)]/16 to-amber-300/20 p-6 shadow-sm sm:p-8">
+      <section className="section-shell mt-8 rounded-3xl border border-[var(--brand)]/25 bg-linear-to-r from-[var(--brand)]/16 to-amber-300/20 p-6 shadow-sm sm:mt-10 sm:p-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="max-w-2xl">
             <p className="text-sm/6 font-semibold uppercase tracking-wide text-[var(--brand-deep)]">Siguiente paso</p>
@@ -128,13 +124,13 @@ export function LeadMagnetPage() {
               Continua en la version completa para exportaciones HD, lotes y flujo profesional.
             </p>
           </div>
-          <Button href={pricingUrl} color="orange" className="!rounded-full !px-5">
+          <Button href={backgroundRemoverUrl} color="orange" className="!rounded-full !px-5">
             Abrir editor completo
           </Button>
         </div>
       </section>
 
-      <footer className="section-shell mt-6 border-t border-zinc-900/10 pt-4 text-sm/6 text-zinc-600">
+      <footer className="section-shell mt-10 border-t border-zinc-900/10 pt-6 text-sm/6 text-zinc-600">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p>© {new Date().getFullYear()} {siteConfig.name}</p>
           <p>Procesamiento rapido de fondos para imagenes.</p>

@@ -214,11 +214,11 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
 
   return (
     <>
-      <div className={className}>
+      <div className={["mx-auto w-full max-w-6xl", className].filter(Boolean).join(" ")}>
         <div
           className={[
-            "card-noise relative overflow-hidden rounded-2xl border-2 border-dashed p-6 sm:p-8",
-            "min-h-[24rem] cursor-pointer bg-(--bg-card) shadow-xl transition",
+            "card-noise relative overflow-hidden rounded-2xl border-2 border-dashed p-6 sm:p-7",
+            "min-h-[19rem] cursor-pointer bg-(--bg-card) shadow-xl transition sm:min-h-[22rem]",
             isDragOver
               ? "border-[var(--brand)] bg-[var(--brand)]/5"
               : "border-zinc-900/20 hover:border-[var(--brand)]/55 hover:bg-white",
@@ -248,7 +248,7 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
           />
 
           {showCaptcha ? (
-            <div className="grid min-h-[19rem] place-items-center gap-4 text-center">
+            <div className="grid min-h-[14rem] place-items-center gap-4 text-center sm:min-h-[16rem]">
               <div className="grid gap-2">
                 <Badge color="orange">Verificacion</Badge>
                 <p className="text-2xl/8 font-semibold text-zinc-900">Confirma que eres humano</p>
@@ -259,7 +259,7 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
               <div id="hcaptcha-challenge-area" className="mx-auto" />
             </div>
           ) : isProcessing ? (
-            <div className="grid min-h-[19rem] place-items-center gap-4 text-center">
+            <div className="grid min-h-[14rem] place-items-center gap-4 text-center sm:min-h-[16rem]">
               <div className="relative">
                 <Loader2 className="size-12 animate-spin text-[var(--brand)]" />
                 <Upload className="absolute inset-0 m-auto size-5 text-[var(--brand-deep)]" />
@@ -295,22 +295,28 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
               </div>
             </div>
           ) : error ? (
-            <div className="grid min-h-[19rem] place-items-center gap-4 text-center">
-              <AlertCircle className="size-11 text-red-600" />
+            <div className="grid min-h-[14rem] place-items-center gap-5 text-center sm:min-h-[16rem]">
+              <div className="grid size-16 place-items-center rounded-full border border-red-200 bg-red-50 shadow-xs">
+                <AlertCircle className="size-8 text-red-600" />
+              </div>
               <div className="grid gap-1">
                 <p className="text-lg/7 font-semibold text-red-700">No se pudo procesar</p>
                 <p className="max-w-sm text-sm/6 text-zinc-600">{error}</p>
               </div>
-              <Button outline onClick={(event) => {
-                event.stopPropagation();
-                handleTryAgain();
-              }}>
+              <Button
+                outline
+                className="border-zinc-300 bg-white/90 text-zinc-700 hover:border-zinc-400 hover:bg-white"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleTryAgain();
+                }}
+              >
                 <RefreshCw data-slot="icon" />
                 Intentar otra vez
               </Button>
             </div>
           ) : result ? (
-            <div className="grid min-h-[19rem] place-items-center gap-4 text-center">
+            <div className="grid min-h-[14rem] place-items-center gap-4 text-center sm:min-h-[16rem]">
               <CheckCircle2 className="size-12 text-emerald-600" />
               <div className="grid gap-1">
                 <p className="text-2xl/8 font-semibold text-zinc-900">Listo, fondo eliminado</p>
@@ -328,7 +334,7 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
                   Ver resultado
                 </Button>
                 <Button
-                  plain
+                  color="zinc"
                   onClick={(event) => {
                     event.stopPropagation();
                     handleTryAgain();
@@ -340,21 +346,23 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
               </div>
             </div>
           ) : (
-            <div className="grid min-h-[19rem] place-items-center gap-4 text-center">
-              <div className="grid gap-2">
+            <div className="grid min-h-[14rem] place-items-center gap-4 text-center sm:min-h-[16rem]">
+              <div className="grid gap-2.5">
                 <p className="text-3xl/9 font-semibold text-zinc-900 sm:text-4xl/10">Sube tu imagen</p>
                 <p className="mx-auto max-w-xl text-base/7 text-zinc-600">Arrastra y suelta o toca para elegir archivo.</p>
               </div>
-              <Button color="orange" onClick={(event) => {
-                event.stopPropagation();
-                openFilePicker("inline_button");
-              }}>
-                <Upload data-slot="icon" />
-                Elegir imagen
-              </Button>
-              <p className="text-xs/5 text-zinc-500">
-                JPG, PNG y WEBP hasta {formatFileSize(10 * 1024 * 1024)}.
-              </p>
+              <div className="grid justify-items-center gap-1.5">
+                <Button color="dark/zinc" className="!rounded-full !px-5" onClick={(event) => {
+                  event.stopPropagation();
+                  openFilePicker("inline_button");
+                }}>
+                  <Upload data-slot="icon" />
+                  Elegir imagen
+                </Button>
+                <p className="text-xs/5 text-zinc-500">
+                  JPG, PNG y WEBP hasta {formatFileSize(10 * 1024 * 1024)}.
+                </p>
+              </div>
             </div>
           )}
         </div>
@@ -378,7 +386,7 @@ function DemoUploaderComponent({ className }: DemoUploaderProps) {
       {!isProcessing && !showCaptcha && !showDownloadModal && !result ? (
         <div className="pointer-events-none fixed inset-x-0 bottom-4 z-40 px-4 sm:hidden">
           <Button
-            color="orange"
+            color="dark/zinc"
             className="pointer-events-auto w-full justify-center !rounded-full shadow-lg"
             onClick={(event) => {
               event.stopPropagation();

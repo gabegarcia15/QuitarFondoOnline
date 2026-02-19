@@ -46,17 +46,74 @@ async function verifyCaptcha(token: string, secret: string): Promise<boolean> {
 }
 
 function pickOutputUrl(output: unknown): string {
-  if (typeof output === "string") return output;
-  if (Array.isArray(output) && typeof output[0] === "string") return output[0];
-  if (
-    output &&
-    typeof output === "object" &&
-    "output" in output &&
-    Array.isArray((output as { output?: unknown[] }).output)
-  ) {
-    const first = (output as { output?: unknown[] }).output?.[0];
-    if (typeof first === "string") return first;
+  const queue: unknown[] = [output];
+  const seen = new Set<object>();
+
+  while (queue.length > 0) {
+    const current = queue.shift();
+    if (!current) continue;
+
+    if (typeof current === "string") {
+      if (current.startsWith("http://") || current.startsWith("https://") || current.startsWith("data:")) {
+        return current;
+      }
+      continue;
+    }
+
+    if (current instanceof URL) {
+      return current.toString();
+    }
+
+    if (Array.isArray(current)) {
+      for (const item of current) queue.push(item);
+      continue;
+    }
+
+    if (typeof current !== "object") continue;
+    if (seen.has(current)) continue;
+    seen.add(current);
+
+    const fileLike = current as {
+      url?: (() => URL | string) | string;
+      toString?: () => string;
+    };
+
+    if (typeof fileLike.url === "function") {
+      const urlValue = fileLike.url();
+      if (urlValue instanceof URL) return urlValue.toString();
+      if (
+        typeof urlValue === "string" &&
+        (urlValue.startsWith("http://") || urlValue.startsWith("https://") || urlValue.startsWith("data:"))
+      ) {
+        return urlValue;
+      }
+    }
+
+    if (typeof fileLike.url === "string") {
+      if (
+        fileLike.url.startsWith("http://") ||
+        fileLike.url.startsWith("https://") ||
+        fileLike.url.startsWith("data:")
+      ) {
+        return fileLike.url;
+      }
+    }
+
+    if (typeof fileLike.toString === "function") {
+      const stringValue = fileLike.toString();
+      if (
+        typeof stringValue === "string" &&
+        (stringValue.startsWith("http://") || stringValue.startsWith("https://") || stringValue.startsWith("data:"))
+      ) {
+        return stringValue;
+      }
+    }
+
+    for (const value of Object.values(current as Record<string, unknown>)) {
+      queue.push(value);
+    }
   }
+
   return "";
 }
 

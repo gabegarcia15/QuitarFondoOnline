@@ -4,7 +4,7 @@ export type AnalyticsEventName =
   | "upload_started"
   | "upload_completed"
   | "hero_upload_entry_clicked"
-  | "redirect_to_pricing_clicked"
+  | "redirect_to_background_remover_clicked"
   | "coupon_shown"
   | "coupon_applied_attempted";
 
