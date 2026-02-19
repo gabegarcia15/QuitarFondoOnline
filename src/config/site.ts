@@ -15,10 +15,19 @@ function normalizeSiteUrl(input: string): string {
 const normalizedSiteUrl = normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL);
 
 export const siteConfig = {
-  name: "Eliminar Fondo De Una Imagen",
-  headline: "Eliminar Fondo De Una Imagen",
+  name: "Quitar Fondo Online",
+  headline: "Quitar Fondo Online",
   description:
-    "Eliminar Fondo De Una Imagen online en segundos con una herramienta simple en espanol para recortes limpios.",
+    "Quitar fondo online en segundos con una herramienta simple en espanol para recortes limpios.",
+  primaryKeyword: "quitar fondo online",
+  keywords: [
+    "quitar fondo online",
+    "quitar fondo online gratis",
+    "eliminar fondo de imagen",
+    "removedor de fondo",
+    "fondo transparente png",
+    "quitar fondo blanco",
+  ],
   siteUrl: normalizedSiteUrl,
   backgroundRemoverUrl:
     process.env.NEXT_PUBLIC_BR_HOME_URL ?? "https://backgroundremover.com",

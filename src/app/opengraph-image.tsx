@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-export const alt = "Eliminar Fondo De Una Imagen";
+export const alt = "Quitar Fondo Online";
 export const size = {
   width: 1200,
   height: 630,
@@ -26,8 +26,8 @@ export default function OpenGraphImage() {
           Removedor de fondo online
         </div>
         <div style={{ marginTop: 20, fontSize: 78, lineHeight: 1.05, fontWeight: 800, display: "flex", flexDirection: "column" }}>
-          <span>Eliminar Fondo</span>
-          <span>De Una Imagen</span>
+          <span>Quitar Fondo</span>
+          <span>Online</span>
         </div>
         <div style={{ marginTop: 24, fontSize: 34, color: "#514a42" }}>Sube tu foto y quita el fondo en segundos.</div>
       </div>

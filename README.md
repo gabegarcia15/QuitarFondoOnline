@@ -1,4 +1,4 @@
-# Eliminar Fondo De Una Imagen
+# Quitar Fondo Online
 
 Sitio lead magnet en espanol para enviar trafico calificado a Background Remover.
 

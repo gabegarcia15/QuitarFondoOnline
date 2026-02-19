@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
-const pageTitle = "Politica de Privacidad | Eliminar Fondo De Una Imagen";
-const pageDescription = "Politica de privacidad clara y simple para Eliminar Fondo De Una Imagen.";
+const pageTitle = "Politica de Privacidad | Quitar Fondo Online";
+const pageDescription = "Politica de privacidad clara y simple para Quitar Fondo Online.";
 
 const sections = [
   {

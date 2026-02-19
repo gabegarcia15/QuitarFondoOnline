@@ -2,13 +2,19 @@ import type { Metadata } from "next";
 import { LeadMagnetPage } from "@/components/lead-magnet/landing-page";
 import { siteConfig } from "@/config/site";
 
-const pageTitle = "Eliminar Fondo De Una Imagen | Quitar Fondo Online Gratis";
+const pageTitle = "Quitar Fondo a una Imagen | Editor Online Gratis en Segundos";
 const pageDescription =
-  "Eliminar Fondo De Una Imagen en segundos. Sube tu foto, elimina el fondo y descarga el resultado gratis.";
+  "Quitar fondo a una imagen online con recortes limpios para producto, logos y marketing. Sube tu foto y descarga PNG transparente en segundos.";
 
 export const metadata: Metadata = {
   title: pageTitle,
   description: pageDescription,
+  keywords: [
+    siteConfig.primaryKeyword,
+    "quitar fondo online gratis",
+    "eliminar fondo de imagen",
+    "removedor de fondo online",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -27,13 +33,14 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const beforeImageUrl = `${siteConfig.siteUrl}/examples/pexels-olly-733872.jpg`;
-  const afterImageUrl = `${siteConfig.siteUrl}/examples/pexels-olly-733872-after.png`;
+  const beforeImageUrl = `${siteConfig.siteUrl}/9ff8b609-8ddc-4ca2-a16c-59b80e3f52a3.jpeg`;
+  const afterImageUrl = `${siteConfig.siteUrl}/pexels-pixabay-54097-sin-fondo.png`;
 
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Eliminar Fondo De Una Imagen",
+    name: "Quitar Fondo Online",
+    alternateName: ["Quitar Fondo Online Gratis", "Removedor de fondo online"],
     url: siteConfig.siteUrl,
     inLanguage: "es",
   };
@@ -41,7 +48,7 @@ export default function Page() {
   const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Eliminar Fondo De Una Imagen",
+    name: "Quitar Fondo Online",
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Web",
     inLanguage: "es",
@@ -62,34 +69,34 @@ export default function Page() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Que pasa despues de mi descarga gratis?",
+        name: "Que sucede despues de la descarga inicial?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Puedes descargar tu resultado y, si necesitas mas calidad o flujo profesional, continuar al editor completo.",
+          text: "Tu archivo queda listo para bajar de inmediato y, si quieres mas precision o funciones pro, puedes abrir el editor completo.",
         },
       },
       {
         "@type": "Question",
-        name: "Necesito crear cuenta para probar?",
+        name: "Puedo probar sin registrarme?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. Puedes subir y procesar tu imagen primero. La cuenta solo es necesaria cuando quieras escalar o comprar un plan.",
+          text: "Si. Primero subes y procesas la foto. Solo pedimos cuenta cuando necesitas trabajar a escala o activar un plan.",
         },
       },
       {
         "@type": "Question",
-        name: "Que formatos aceptan?",
+        name: "Que archivos puedo subir?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Aceptamos JPG, PNG y WEBP de hasta 10MB por archivo.",
+          text: "La prueba acepta JPG, PNG y WEBP con un maximo de 10 MB por imagen.",
         },
       },
       {
         "@type": "Question",
-        name: "Como obtengo mayor resolucion?",
+        name: "Como consigo una salida en mayor calidad?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Desde la vista de resultado puedes abrir la version completa para acceder a opciones avanzadas y exportaciones HD.",
+          text: "Tras ver el resultado puedes pasar al flujo completo para usar exportaciones HD y ajustes adicionales.",
         },
       },
     ],
@@ -98,8 +105,8 @@ export default function Page() {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "Como eliminar el fondo de una imagen",
-    description: "Flujo rapido en 3 pasos para quitar el fondo de una imagen online.",
+    name: "Como quitar fondo a una imagen en 3 pasos",
+    description: "Proceso corto de tres pasos para separar el sujeto, quitar el fondo y descargar PNG transparente.",
     inLanguage: "es",
     totalTime: "PT30S",
     supply: [
@@ -111,18 +118,18 @@ export default function Page() {
     step: [
       {
         "@type": "HowToStep",
-        name: "Sube la imagen",
-        text: "Arrastra o selecciona una imagen en JPG, PNG o WEBP.",
+        name: "Carga tu foto",
+        text: "Sube una imagen en JPG, PNG o WEBP desde tu equipo.",
       },
       {
         "@type": "HowToStep",
-        name: "Procesamos el fondo",
-        text: "Nuestro modelo de IA recorta el sujeto automaticamente.",
+        name: "La IA recorta el fondo",
+        text: "El modelo identifica el sujeto principal y elimina el fondo en automatico.",
       },
       {
         "@type": "HowToStep",
-        name: "Descarga y continua",
-        text: "Guarda tu resultado o abre el editor completo para opciones avanzadas.",
+        name: "Descarga o sigue editando",
+        text: "Guarda el resultado o abre la version completa para ajustes avanzados.",
       },
     ],
   };
@@ -131,7 +138,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "ImageObject",
     name: "Foto original antes de eliminar fondo",
-    description: "Foto real de retrato tomada de Pexels antes del procesamiento.",
+    description: "Imagen original antes de aplicar el recorte de fondo.",
     inLanguage: "es",
     contentUrl: beforeImageUrl,
     url: beforeImageUrl,
@@ -142,7 +149,7 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "ImageObject",
     name: "Foto resultante despues de eliminar fondo",
-    description: "Resultado real con fondo eliminado sobre retrato de muestra de Pexels.",
+    description: "Resultado de ejemplo con el fondo eliminado y sujeto aislado.",
     inLanguage: "es",
     contentUrl: afterImageUrl,
     url: afterImageUrl,

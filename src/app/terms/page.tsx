@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
-const pageTitle = "Terminos de Servicio | Eliminar Fondo De Una Imagen";
-const pageDescription = "Terminos claros y simples para usar Eliminar Fondo De Una Imagen.";
+const pageTitle = "Terminos de Servicio | Quitar Fondo Online";
+const pageDescription = "Terminos claros y simples para usar Quitar Fondo Online.";
 
 const sections = [
   {

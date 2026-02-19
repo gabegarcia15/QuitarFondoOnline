@@ -32,44 +32,44 @@ export type Guide = {
 export const guides = {
   quitarFondoBlanco: {
     slug: "quitar-fondo-blanco",
-    pageTitle: "Quitar Fondo Blanco de una Imagen Gratis",
+    pageTitle: "Quitar Fondo Blanco para Ecommerce | Guia Operativa",
     pageDescription:
-      "Guia practica para quitar fondo blanco de fotos de producto y exportar PNG transparente en segundos.",
-    h1: "Como quitar fondo blanco de una imagen en segundos",
+      "Metodo practico para limpiar fondo blanco en fotos de producto y exportar archivos listos para tu catalogo.",
+    h1: "Quitar fondo blanco en fotos de producto sin friccion",
     intro:
-      "Si vendes online, un fondo limpio mejora CTR, confianza y conversion. Aqui tienes un flujo directo para eliminar fondos blancos y dejar tu imagen lista para catalogo.",
+      "En operaciones ecommerce, quitar fondo a una imagen con un metodo repetible evita retrabajos y acelera la publicacion del catalogo.",
     highlights: [
-      "Recorte rapido para fotos de producto sin edicion manual compleja.",
-      "Salida en PNG transparente lista para marketplaces y anuncios.",
-      "Mejor consistencia visual entre imagenes de un mismo catalogo.",
+      "Estandariza el recorte de SKU nuevos sin depender de edicion manual extensa.",
+      "Obtiene PNG transparentes listos para fichas, anuncios y marketplaces.",
+      "Reduce diferencias visuales entre tomas para mejorar coherencia de catalogo.",
     ],
     steps: [
       {
-        title: "Sube tu imagen original",
-        copy: "Carga JPG, PNG o WEBP con buena luz y sujeto definido.",
+        title: "Selecciona la foto base",
+        copy: "Trabaja con imagenes bien iluminadas para detectar bordes con mayor precision.",
       },
       {
-        title: "Procesa el recorte automatico",
-        copy: "La IA detecta el sujeto y elimina el fondo blanco en segundos.",
+        title: "Aplica limpieza del fondo",
+        copy: "Procesa el recorte automatico y confirma que el producto quede aislado.",
       },
       {
-        title: "Descarga y valida bordes",
-        copy: "Descarga en PNG y revisa bordes finos como pelo, vidrio o sombras.",
+        title: "Exporta y valida para tienda",
+        copy: "Descarga el PNG y revisa zonas finas antes de subirlo al catalogo.",
       },
     ],
     useCases: [
-      "Fotos de producto para Amazon, Mercado Libre y Shopify.",
-      "Imagenes de ficha tecnica con fondo uniforme.",
-      "Creativos para redes con composicion libre sobre cualquier color.",
+      "Altas de producto en Shopify, WooCommerce y marketplaces.",
+      "Actualizacion rapida de imagenes cuando cambia empaque o variante.",
+      "Bancos internos de assets listos para equipo de performance.",
     ],
     faqs: [
       {
-        q: "Se pierde calidad al quitar el fondo?",
-        a: "La salida mantiene calidad alta para uso comercial, especialmente en exportacion PNG.",
+        q: "Funciona con fondos blancos irregulares?",
+        a: "Si, y conviene revisar sombras suaves para ajustar piezas con detalles delicados.",
       },
       {
-        q: "Puedo usarlo con fotos tomadas con celular?",
-        a: "Si. Mientras el sujeto este enfocado, el resultado suele ser solido para ecommerce.",
+        q: "Me sirve para cargas masivas de catalogo?",
+        a: "Si, porque el flujo mantiene un criterio uniforme y facilita QA antes de publicar.",
       },
     ],
     relatedGuides: [
@@ -80,44 +80,44 @@ export const guides = {
   },
   fondoTransparentePng: {
     slug: "fondo-transparente-png",
-    pageTitle: "Fondo Transparente PNG: Guia Rapida",
+    pageTitle: "Fondo Transparente PNG | Activos Reutilizables para Web y Diseno",
     pageDescription:
-      "Aprende a convertir cualquier foto a PNG con fondo transparente para diseno, ecommerce y marketing.",
-    h1: "Como crear un PNG con fondo transparente",
+      "Convierte imagenes en PNG transparente para reutilizarlas en sitios, presentaciones y piezas creativas sin rehacer recortes.",
+    h1: "Crear PNG transparente para reutilizar activos en cualquier pieza",
     intro:
-      "Un PNG transparente te permite reutilizar una imagen en web, anuncios y presentaciones sin cajas blancas ni recortes manuales.",
+      "Si necesitas recursos modulares, quitar fondo a una imagen y guardarla en PNG transparente te permite mover el mismo activo entre web, diseno y anuncios.",
     highlights: [
-      "Resultado compatible con herramientas de diseno y gestores de anuncios.",
-      "Facil de superponer sobre cualquier color o fotografia de fondo.",
-      "Ideal para piezas de marca y elementos visuales reutilizables.",
+      "Un mismo archivo funciona en landing pages, banners y mockups.",
+      "Facilita composiciones sobre fondos claros, oscuros o fotograficos.",
+      "Evita repetir recortes cada vez que cambias formato o canal.",
     ],
     steps: [
       {
-        title: "Elige una imagen con sujeto claro",
-        copy: "Prioriza contraste entre sujeto y fondo para mejorar precision.",
+        title: "Escoge una imagen utilizable",
+        copy: "Prioriza archivos nitidos para preservar contornos en multiples tamanos.",
       },
       {
-        title: "Ejecuta la eliminacion de fondo",
-        copy: "La herramienta procesa la imagen y genera una version sin fondo.",
+        title: "Genera la version sin fondo",
+        copy: "Ejecuta el proceso de recorte hasta obtener el sujeto aislado.",
       },
       {
-        title: "Exporta como PNG transparente",
-        copy: "Descarga y usa el archivo en web, diseno o catalogos digitales.",
+        title: "Guarda el PNG maestro",
+        copy: "Exporta un archivo transparente que puedas reutilizar en distintas herramientas.",
       },
     ],
     useCases: [
-      "Banners y hero images con productos recortados.",
-      "Presentaciones comerciales con elementos visuales limpios.",
-      "Recursos para social media con composicion flexible.",
+      "Componentes visuales para sitios, newsletters y banners.",
+      "Elementos graficos para Figma, Canva o presentaciones internas.",
+      "Bibliotecas de assets para equipos de contenido multicanal.",
     ],
     faqs: [
       {
-        q: "Por que PNG y no JPG?",
-        a: "PNG soporta transparencia. JPG siempre rellena el fondo con un color.",
+        q: "PNG transparente pesa mas que JPG?",
+        a: "Puede ocupar mas espacio, pero conserva transparencia y evita fondos de relleno.",
       },
       {
-        q: "Sirve para impresiones?",
-        a: "Si, especialmente para artes finales que requieren composicion sobre fondos variables.",
+        q: "Puedo reutilizar el mismo PNG en distintos tamanos?",
+        a: "Si, y conviene guardar una version maestra para derivar variantes sin perder calidad visual.",
       },
     ],
     relatedGuides: [
@@ -128,44 +128,44 @@ export const guides = {
   },
   fotosDeProductoSinFondo: {
     slug: "fotos-de-producto-sin-fondo",
-    pageTitle: "Fotos de Producto Sin Fondo para Ecommerce",
+    pageTitle: "Fotos de Producto Sin Fondo | Consistencia para Catalogo y Ads",
     pageDescription:
-      "Optimiza tus fotos de producto sin fondo para catalogos, anuncios y conversion en tiendas online.",
-    h1: "Fotos de producto sin fondo: flujo recomendado para vender mas",
+      "Estandariza fotos de producto sin fondo para mantener catalogos coherentes y acelerar operaciones publicitarias.",
+    h1: "Fotos de producto sin fondo para catalogo consistente y anuncios agiles",
     intro:
-      "La limpieza visual en ecommerce impacta conversion. Con un flujo consistente de recorte, tus listados se ven mas profesionales y comparables.",
+      "Para equipos de crecimiento, quitar fondo a una imagen dentro de un flujo estable mejora la consistencia del catalogo y simplifica la ejecucion de anuncios.",
     highlights: [
-      "Catalogo mas uniforme en miniaturas y pagina de producto.",
-      "Menos tiempo operativo para el equipo de contenido.",
-      "Mayor control para crear variaciones publicitarias rapidamente.",
+      "Uniforma miniaturas y paginas de producto con una presentacion coherente.",
+      "Reduce tiempos operativos entre produccion creativa y trafico pago.",
+      "Facilita pruebas de anuncios con variaciones sobre el mismo recorte.",
     ],
     steps: [
       {
-        title: "Prepara lote de imagenes",
-        copy: "Usa fotos bien iluminadas y evita fondos con ruido visual excesivo.",
+        title: "Organiza el lote de fotos",
+        copy: "Agrupa imagenes por categoria y calidad antes de iniciar el recorte.",
       },
       {
-        title: "Quita fondo y revisa casos complejos",
-        copy: "Valida bordes en productos translucidos o con partes finas.",
+        title: "Recorta y revisa bordes clave",
+        copy: "Valida transparencias en zonas complejas como reflejos o materiales finos.",
       },
       {
-        title: "Publica en formato consistente",
-        copy: "Mantener mismo estilo mejora confianza y lectura del catalogo.",
+        title: "Publica con criterio unico",
+        copy: "Aplica el mismo estilo final para catalogo, feed y campanas.",
       },
     ],
     useCases: [
-      "Tiendas Shopify y WooCommerce con catalogos grandes.",
-      "Feeds de anuncios dinamicos para Meta y Google.",
-      "Marketplaces que exigen fondo neutral o transparente.",
+      "Catalogos extensos en ecommerce con multiples familias de producto.",
+      "Flujos de anuncios dinamicos para Meta, Google y marketplaces.",
+      "Repositorios creativos para equipos de paid media y diseno.",
     ],
     faqs: [
       {
-        q: "Cada cuanto debo actualizar fotos?",
-        a: "Cada vez que cambie empaque, color o posicionamiento visual principal del producto.",
+        q: "Que gano al mantener un solo estilo de recorte?",
+        a: "Mejora la lectura visual del catalogo y reduce friccion cuando escalan nuevas campanas.",
       },
       {
-        q: "Esto ayuda al SEO?",
-        a: "Indirectamente si: mejora experiencia, CTR y calidad visual de paginas de producto.",
+        q: "Esto impacta la operacion de anuncios?",
+        a: "Si, porque acelera la preparacion de creativos y mantiene consistencia entre canales.",
       },
     ],
     relatedGuides: [
@@ -176,44 +176,44 @@ export const guides = {
   },
   logoSinFondo: {
     slug: "logo-sin-fondo",
-    pageTitle: "Logo Sin Fondo: Convertir a PNG Transparente",
+    pageTitle: "Logo Sin Fondo | Archivo Transparente para Todos tus Canales",
     pageDescription:
-      "Convierte tu logo a PNG transparente para web, redes sociales, presentaciones y piezas de marca.",
-    h1: "Logo sin fondo: conviertelo a PNG transparente",
+      "Lleva tu logo sin fondo a web, redes, documentos y campanas con un PNG transparente reutilizable.",
+    h1: "Logo sin fondo para mover tu marca entre canales sin fricciones",
     intro:
-      "Un logo transparente evita bordes blancos y permite uso limpio en cualquier superficie digital. Esta guia resume el proceso para obtener un resultado listo para marca.",
+      "Cuando tu identidad debe viajar entre formatos, quitar fondo a una imagen del logo evita fondos no deseados y mantiene la marca lista para cualquier canal.",
     highlights: [
-      "Uso profesional del logo en sitios web y creativos publicitarios.",
-      "Compatibilidad inmediata con fondos claros, oscuros o fotograficos.",
-      "Reduccion de retrabajo en equipos de marketing y diseno.",
+      "Permite usar el logo sobre piezas digitales con fondos variables.",
+      "Conserva una version portable para web, social y material comercial.",
+      "Reduce ajustes manuales cada vez que cambia el formato de salida.",
     ],
     steps: [
       {
-        title: "Sube el archivo del logo",
-        copy: "Funciona mejor cuando el logo tiene buen contraste frente al fondo.",
+        title: "Importa el logo original",
+        copy: "Usa el archivo con mayor nitidez disponible para preservar detalles.",
       },
       {
-        title: "Procesa y revisa detalles",
-        copy: "Verifica zonas delicadas como esquinas, letras finas o sombras.",
+        title: "Limpia el fondo y comprueba trazos",
+        copy: "Revisa letras finas, bordes curvos y zonas con sombra.",
       },
       {
-        title: "Descarga PNG transparente",
-        copy: "Guarda una version maestra para web, redes y documentos comerciales.",
+        title: "Exporta un PNG de marca",
+        copy: "Guarda un master transparente para reutilizarlo en todos tus canales.",
       },
     ],
     useCases: [
-      "Header y favicon extendido en sitios web.",
-      "Presentaciones corporativas y propuestas comerciales.",
-      "Anuncios, reels y publicaciones sociales.",
+      "Sitios web, headers, firmas y documentos corporativos.",
+      "Publicaciones sociales, video corto y anuncios de performance.",
+      "Material comercial para ventas, partnerships y eventos.",
     ],
     faqs: [
       {
-        q: "Sirve para logos pequenos?",
-        a: "Si, aunque conviene partir de la mayor resolucion disponible para bordes mas limpios.",
+        q: "Sirve para logos con tipografias delgadas?",
+        a: "Si, y se recomienda validar bordes al ampliar para asegurar legibilidad.",
       },
       {
-        q: "Puedo usarlo en fondos oscuros?",
-        a: "Si. El PNG transparente elimina el fondo original y facilita adaptaciones por color.",
+        q: "Puedo usar el mismo archivo en varios fondos?",
+        a: "Si, ese es el objetivo del PNG transparente: adaptar la marca sin cajas de color.",
       },
     ],
     relatedGuides: [

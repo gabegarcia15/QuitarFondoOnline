@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   applicationName: siteConfig.name,
   title: {
-    default: "Eliminar Fondo De Una Imagen",
-    template: "%s | Eliminar Fondo De Una Imagen",
+    default: "Quitar Fondo Online",
+    template: "%s | Quitar Fondo Online",
   },
   description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  alternates: {
+    canonical: "/",
+  },
   manifest: "/site.webmanifest",
   icons: {
     icon: [
@@ -23,13 +27,17 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
+    title: "Quitar Fondo Online",
     description: siteConfig.description,
     siteName: siteConfig.name,
+    url: siteConfig.siteUrl,
     locale: "es_ES",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Quitar Fondo Online",
+    description: siteConfig.description,
   },
   robots: {
     index: true,

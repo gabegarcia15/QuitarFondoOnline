@@ -9,28 +9,28 @@ import { DemoUploader } from "./demo-uploader";
 
 const faqs = [
   {
-    q: "Que pasa despues de mi descarga gratis?",
-    a: "Puedes descargar tu resultado y, si necesitas mas calidad o flujo profesional, continuar al editor completo.",
+    q: "Que sucede despues de la descarga inicial?",
+    a: "Tu archivo queda listo para bajar de inmediato y, si quieres mas precision o funciones pro, puedes abrir el editor completo.",
   },
   {
-    q: "Necesito crear cuenta para probar?",
-    a: "No. Puedes subir y procesar tu imagen primero. La cuenta solo es necesaria cuando quieras escalar o comprar un plan.",
+    q: "Puedo probar sin registrarme?",
+    a: "Si. Primero subes y procesas la foto. Solo pedimos cuenta cuando necesitas trabajar a escala o activar un plan.",
   },
   {
-    q: "Que formatos aceptan?",
-    a: "Aceptamos JPG, PNG y WEBP de hasta 10MB por archivo.",
+    q: "Que archivos puedo subir?",
+    a: "La prueba acepta JPG, PNG y WEBP con un maximo de 10 MB por imagen.",
   },
   {
-    q: "Como obtengo mayor resolucion?",
-    a: "Desde la vista de resultado puedes abrir la version completa para acceder a opciones avanzadas y exportaciones HD.",
+    q: "Como consigo una salida en mayor calidad?",
+    a: "Tras ver el resultado puedes pasar al flujo completo para usar exportaciones HD y ajustes adicionales.",
   },
 ] as const;
 
 const sampleComparison = {
-  beforeSrc: "/examples/pexels-olly-733872.jpg",
-  afterSrc: "/examples/pexels-olly-733872-after.png",
-  pexelsPhotoUrl: "https://www.pexels.com/photo/closeup-photo-of-woman-with-brown-coat-and-gray-top-733872/",
-  photographerName: "Andrea Piacquadio",
+  beforeSrc: "/9ff8b609-8ddc-4ca2-a16c-59b80e3f52a3.jpeg",
+  afterSrc: "/pexels-pixabay-54097-sin-fondo.png",
+  pexelsPhotoUrl: "https://www.pexels.com/photo/spain-flag-in-pole-54097/",
+  photographerName: "Pixabay",
 } as const;
 
 export function LeadMagnetPage() {
@@ -45,7 +45,7 @@ export function LeadMagnetPage() {
               Removedor de fondo online
             </p>
             <h1 className="text-balance font-semibold text-4xl/10 text-zinc-900 sm:text-6xl/[1.02]">
-              Eliminar Fondo De Una Imagen
+              Quitar Fondo Online
             </h1>
           </div>
           <DemoUploader className="mt-7 sm:mt-9" />
@@ -59,10 +59,10 @@ export function LeadMagnetPage() {
         <div className="grid gap-2">
           <p className="text-sm/6 font-semibold uppercase tracking-wide text-[var(--brand-deep)]">Ejemplo real</p>
           <h2 className="text-balance text-2xl/8 font-semibold text-zinc-900 sm:text-3xl/9">
-            Antes y despues con una foto real de Pexels
+            Antes y despues con una imagen real
           </h2>
           <p className="max-w-3xl text-sm/6 text-zinc-600">
-            Usamos una foto real de Pexels y la procesamos con nuestro removedor de fondo para mostrar un resultado real.
+            Mostramos un ejemplo real procesado con nuestro removedor de fondo para que veas el cambio en segundos.
           </p>
         </div>
 
@@ -72,7 +72,7 @@ export function LeadMagnetPage() {
             <div className="overflow-hidden rounded-lg border border-zinc-900/10 bg-white">
               <img
                 src={sampleComparison.beforeSrc}
-                alt="Imagen original de retrato antes de eliminar fondo"
+                alt="Imagen original antes de eliminar fondo"
                 className="block h-auto w-full"
                 loading="lazy"
               />
@@ -84,7 +84,7 @@ export function LeadMagnetPage() {
             <div className="bg-checkered overflow-hidden rounded-lg border border-zinc-900/10 p-2">
               <img
                 src={sampleComparison.afterSrc}
-                alt="Imagen de retrato con fondo eliminado"
+                alt="Imagen con fondo eliminado"
                 className="block h-auto w-full"
                 loading="lazy"
               />
@@ -109,12 +109,12 @@ export function LeadMagnetPage() {
       <section id="como-funciona" className="section-shell mt-[4.5rem] rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-[5.5rem] sm:p-8 lg:mt-[6.5rem]">
         <h2 className="text-2xl/8 font-semibold text-zinc-900">Tu flujo en 3 pasos</h2>
         <ol className="mt-4 grid gap-3">
-          <StepItem number="01" title="Sube la imagen" copy="Arrastra o selecciona JPG, PNG o WEBP." />
-          <StepItem number="02" title="Procesamos el fondo" copy="Nuestro modelo de IA recorta tu sujeto automaticamente." />
+          <StepItem number="01" title="Carga tu foto" copy="Importa un archivo JPG, PNG o WEBP desde tu dispositivo." />
+          <StepItem number="02" title="La IA separa el sujeto" copy="El sistema detecta el elemento principal y retira el fondo automaticamente." />
           <StepItem
             number="03"
-            title="Descarga y continua"
-            copy="Guarda tu resultado o abre el editor completo cuando necesites mas opciones."
+            title="Descarga o edita mas"
+            copy="Baja la imagen recortada o continua en el editor avanzado si necesitas control extra."
           />
         </ol>
       </section>
@@ -122,23 +122,23 @@ export function LeadMagnetPage() {
       <section id="beneficios" className="section-shell mt-8 grid gap-4 sm:mt-10 md:grid-cols-2 xl:grid-cols-4">
         <FeatureCard
           icon={<Layers2 className="size-5 text-[var(--brand)]" />}
-          title="Ideal para ecommerce"
-          copy="Acelera fotos de producto, catalogos y creativos para marketplaces."
+          title="Pensado para catalogos ecommerce"
+          copy="Prepara imagenes de producto y creativos con una presentacion limpia para venta online."
         />
         <FeatureCard
           icon={<Clock3 className="size-5 text-[var(--brand)]" />}
-          title="Menos tiempo de edicion"
-          copy="Recibe recortes en segundos y reduce pasos manuales en tu equipo."
+          title="Operacion mas agil"
+          copy="Automatiza el recorte y reduce el tiempo dedicado a edicion repetitiva."
         />
         <FeatureCard
           icon={<ShieldCheck className="size-5 text-[var(--brand)]" />}
-          title="Flujo seguro"
-          copy="Subidas firmadas, captcha y procesamiento controlado en servidor."
+          title="Procesamiento protegido"
+          copy="Combinamos subidas firmadas, captcha y ejecucion en servidor para un flujo controlado."
         />
         <FeatureCard
           icon={<CheckCircle2 className="size-5 text-[var(--brand)]" />}
-          title="Escala cuando quieras"
-          copy="Si necesitas mas control y calidad, puedes continuar al flujo completo."
+          title="Crece sin cambiar de herramienta"
+          copy="Cuando el proyecto exige mas calidad, pasas al entorno completo sin rehacer trabajo."
         />
       </section>
 
@@ -172,9 +172,9 @@ export function LeadMagnetPage() {
       </section>
 
       <section className="section-shell mt-8 rounded-3xl border border-zinc-900/10 bg-white/85 p-6 shadow-sm sm:mt-10 sm:p-8">
-        <h2 className="text-2xl/8 font-semibold text-zinc-900">Guias populares</h2>
+        <h2 className="text-2xl/8 font-semibold text-zinc-900">Guias de Quitar Fondo a una Imagen</h2>
         <p className="mt-2 max-w-3xl text-sm/6 text-zinc-600">
-          Aprende casos especificos para ecommerce y marketing con guias rapidas de eliminacion de fondo.
+          Elige la ruta que necesitas: limpiar fondo blanco, exportar PNG transparente, preparar catalogos de producto o dejar tu logo listo para publicar.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <Link
